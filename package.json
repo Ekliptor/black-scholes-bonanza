@@ -4,8 +4,7 @@
     "description": "A library to deal with options and option strategies",
     "author": "vantessel",
     "license": "MIT",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "src/index.ts",
     "keywords": [
         "black-scholes",
         "black",
