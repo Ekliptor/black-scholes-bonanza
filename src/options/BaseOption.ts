@@ -36,6 +36,26 @@ export abstract class BaseOption {
 
     /**
      * @param spot the current spot price
+     * @param price the market price of the option
+     * @returns the final payoff for a buyer of that option at a given price
+     */
+    getBuyerPayoff(spot: number, price: number): number {
+        const payoff = this.getPayoff(spot);
+        return payoff - price;
+    }
+
+    /**
+     * @param spot the current spot price
+     * @param price the market price of the option
+     * @returns the final payoff for a seller of that option at a given price (option premium)
+     */
+    getSellerPayoff(spot: number, price: number): number {
+        const payoff = this.getPayoff(spot);
+        return payoff + price;
+    }
+
+    /**
+     * @param spot the current spot price
      * @returns the price of the option
      */
     abstract getPrice(spot: number): number;

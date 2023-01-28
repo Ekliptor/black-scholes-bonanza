@@ -1,5 +1,5 @@
 {
-    "name": "black-scholes-bonanza",
+    "name": "@ekliptor/black-scholes-bonanza",
     "version": "1.0.1",
     "description": "A library to deal with options and option strategies",
     "author": "vantessel",

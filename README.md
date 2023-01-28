@@ -5,7 +5,7 @@ A library to deal with options and option strategies
 ## Install
 
 ```bash
-npm i black-scholes-bonanza
+yarn install @ekliptor/black-scholes-bonanza
 ```
 
 ## Features
