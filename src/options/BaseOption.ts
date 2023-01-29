@@ -41,7 +41,7 @@ export abstract class BaseOption {
      */
     getBuyerPayoff(spot: number, price: number): number {
         const payoff = this.getPayoff(spot);
-        return payoff - price;
+        return payoff - price*spot;
     }
 
     /**
@@ -50,8 +50,8 @@ export abstract class BaseOption {
      * @returns the final payoff for a seller of that option at a given price (option premium)
      */
     getSellerPayoff(spot: number, price: number): number {
-        const payoff = this.getPayoff(spot);
-        return payoff + price;
+        const payoff = this.getPayoff(spot); // TODO update lib to allow seller payoff get negative if option price moves against us
+        return -1*payoff + price*spot;
     }
 
     /**
